@@ -25,15 +25,18 @@ const fillTable = (data) => {
 /* Volcar en la textarea de entrada 
  * #original el contenido del fichero fileName */
 const dump = (fileName) => {
-  XXXXXXXXXXXXXXX XXXXXXXX XXXXXX X
-      XXXXXXXXXXXXXXXXXXXXXXXXX
-  XXX
+  $.get(fileName, function(data) {
+    $("#original").val(data);
+  });
 };
  
 const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
+  var files = evt.target.files;
+
+  var reader = new FileReader();
  XXX XXXXX X XXXXXXXXXXXXXXXXX 
 
   XXX XXXXXX X XXX XXXXXXXXXXXXX
@@ -48,6 +51,15 @@ const handleFileSelect = (evt) => {
 const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
+  
+  var files = evt.dataTransfer.files;
+  
+  var reader = new FileReader();
+  reader.onload = (e) => {
+    $("#original").val(e.target.result);
+    evt.target.style.background = "white";
+  };
+  reader.readAsText(files[0]);
 
   XXX XXXXX X XXXXXXXXXXXXXXXXXXXXXXX XX XXXXXXXX XXXXXXX
 
@@ -73,6 +85,11 @@ $(document).ready(() => {
     }
 
     /* Request AJAX para que se calcule la tabla */
+    $("#parse").click() => {
+      if (window.localStorage) localStorage.original = original.value;
+      $.get("/csv"), 
+      {input: }
+          
     XXXXXXXXXXXXXXXXXX XX XX X
         XX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX X XXXXXXXXXXXXXXX
         XXXXXXXXXXXXX 
@@ -81,10 +98,11 @@ $(document).ready(() => {
           XXXXXX
         XX
    XXX
+    }
    /* botones para rellenar el textarea */
-   XXXXXXXXXXXXXXXXXXXXXXXXX XXXXX XX X
-     XXXXXXXXXXX XX XX X XXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
-   XXX
+   $('button.example').each(_.y) => {
+     $(y).click ( () => { dump ($($(y).text()}.txt); })    // hacer el volcado
+     });
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
