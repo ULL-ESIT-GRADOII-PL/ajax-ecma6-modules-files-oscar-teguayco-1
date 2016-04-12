@@ -1,1 +1,1 @@
-web: XXXXXXXXXXX
+web: node ./models/calculate.js
