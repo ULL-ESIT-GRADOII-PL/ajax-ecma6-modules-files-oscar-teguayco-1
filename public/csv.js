@@ -43,7 +43,7 @@ const handleFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "blue";
   };
-  reader.readAsText(files[1])
+  reader.readAsText(files[0])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
@@ -87,17 +87,6 @@ $(document).ready(() => {
     $('button.example').each( (_,y) => {
      $(y).click( () => { dump(`${$(y).text()}.txt`); });
     });
-
-    /* botón de selección en sistema de archivos */
-/*    $('input.inputfile').each( (_, y) => {
-      $(y).click( () => {
-        if (!y.files[0]) {
-          console.log("Select a file!");
-        } else {
-          dump(y.files[0]);
-        }
-      });
-    });*/
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
