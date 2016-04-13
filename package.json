@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   },
-  "homepage": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
+  "homepage": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1",
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
