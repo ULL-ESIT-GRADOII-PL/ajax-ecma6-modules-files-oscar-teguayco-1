@@ -1,5 +1,10 @@
 # Práctica 2: Comma separated values (CSV) with AJAX
 
+TO-DO: acabar README
+
+Link al despliegue: https://sleepy-peak-84160.herokuapp.com/
+
+
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
 * url
   * Type: String
