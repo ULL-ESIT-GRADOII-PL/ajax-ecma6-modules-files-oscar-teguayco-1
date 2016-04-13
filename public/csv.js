@@ -49,15 +49,16 @@ const handleFileSelect = (evt) => {
 const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  
-  var files = evt.dataTransfer.files;
-  
+
+  var files = evt.dataTransfer.files; // FileList object.
+
   var reader = new FileReader();
   reader.onload = (e) => {
+
     $("#original").val(e.target.result);
     evt.target.style.background = "white";
   };
-  reader.readAsText(files[0]);
+  reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
@@ -74,14 +75,18 @@ $(document).ready(() => {
 
     /* Request AJAX para que se calcule la tabla */
     $("#parse").click( () => {
-      if (window.localStorage) localStorage.original = original.value;
-      $.get("/csv"), 
-      {input: }
-    }
-   /* botones para rellenar el textarea */
-   $('button.example').each(_.y) => {
-     $(y).click ( () => { dump ($($(y).text()}.txt); })    // hacer el volcado
-     });
+        if (window.localStorage) localStorage.original = original.value;
+        $.get("/csv", /* Request AJAX para que se calcule la tabla */
+          { input: original.value },
+          fillTable,
+          'json'
+        );
+    });
+   
+    /* botones para rellenar el textarea */
+    $('button.example').each( (_,y) => {
+     $(y).click( () => { dump(`examples/${$(y).text()}.txt`); });
+    });
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
