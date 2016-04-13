@@ -34,17 +34,15 @@ const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
-  var files = evt.target.files;
+  var files = evt.dataTransfer.files; // FileList object.
 
   var reader = new FileReader();
- XXX XXXXX X XXXXXXXXXXXXXXXXX 
+  reader.onload = (e) => {
 
-  XXX XXXXXX X XXX XXXXXXXXXXXXX
-  XXXXXXXXXXXXX X XXX XX X
-  
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  XX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXX
+    $("#original").val(e.target.result);
+    evt.target.style.background = "white";
+  };
+  reader.readAsText(files[0])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
@@ -60,16 +58,6 @@ const handleDragFileSelect = (evt) => {
     evt.target.style.background = "white";
   };
   reader.readAsText(files[0]);
-
-  XXX XXXXX X XXXXXXXXXXXXXXXXXXXXXXX XX XXXXXXXX XXXXXXX
-
-  XXX XXXXXX X XXX XXXXXXXXXXXXX
-  XXXXXXXXXXXXX X XXX XX X
-  
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXX X XXXXXXXX
-  XX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXX
 }
 
 const handleDragOver = (evt) => {
@@ -85,19 +73,10 @@ $(document).ready(() => {
     }
 
     /* Request AJAX para que se calcule la tabla */
-    $("#parse").click() => {
+    $("#parse").click( () => {
       if (window.localStorage) localStorage.original = original.value;
       $.get("/csv"), 
       {input: }
-          
-    XXXXXXXXXXXXXXXXXX XX XX X
-        XX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX X XXXXXXXXXXXXXXX
-        XXXXXXXXXXXXX 
-          X XXXXXX XXXXXXXXXXXXXX XX 
-          XXXXXXXXXX
-          XXXXXX
-        XX
-   XXX
     }
    /* botones para rellenar el textarea */
    $('button.example').each(_.y) => {
