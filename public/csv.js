@@ -34,7 +34,7 @@ const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
-  var files = evt.dataTransfer.files; // FileList object.
+  var files = evt.target.files; // FileList object.
 
   var reader = new FileReader();
   reader.onload = (e) => {
