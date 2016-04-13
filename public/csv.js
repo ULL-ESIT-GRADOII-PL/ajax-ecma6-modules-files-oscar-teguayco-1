@@ -37,14 +37,13 @@ const handleFileSelect = (evt) => {
   console.log(evt);
   var files = evt.target.files; // FileList object.
 
-  console.log(files[0].val());
   var reader = new FileReader();
   reader.onload = (e) => {
 
     $("#original").val(e.target.result);
     evt.target.style.background = "blue";
   };
-  reader.readAsText(files[0])
+  reader.readAsText(files[1])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
