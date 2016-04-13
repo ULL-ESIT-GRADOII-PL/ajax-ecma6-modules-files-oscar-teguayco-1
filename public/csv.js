@@ -86,7 +86,7 @@ $(document).ready(() => {
         );
     });
     
-    /* Useful information about how an AJAX Request works:
+    /* Useful information about how jQuery.get() works:
         https://api.jquery.com/jquery.get/                      */
     
    
