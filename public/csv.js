@@ -54,7 +54,6 @@ const handleDragFileSelect = (evt) => {
 
   var reader = new FileReader();
   reader.onload = (e) => {
-
     $("#original").val(e.target.result);
     evt.target.style.background = "purple";
   };
@@ -64,7 +63,7 @@ const handleDragFileSelect = (evt) => {
 const handleDragOver = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  evt.target.style.background = "yellow";
+  evt.target.style.background = "purple";
 }
 
 $(document).ready(() => {
