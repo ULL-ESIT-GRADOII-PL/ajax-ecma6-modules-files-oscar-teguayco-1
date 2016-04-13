@@ -56,7 +56,7 @@ const handleDragFileSelect = (evt) => {
   reader.onload = (e) => {
 
     $("#original").val(e.target.result);
-    evt.target.style.background = "white";
+    evt.target.style.background = "purple";
   };
   reader.readAsText(files[0])
 }
