@@ -88,7 +88,7 @@ $(document).ready(() => {
     });
 
     /* botón de selección en sistema de archivos */
-    $('input.inputfile').each( (_, y) => {
+/*    $('input.inputfile').each( (_, y) => {
       $(y).click( () => {
         if (!y.files[0]) {
           console.log("Select a file!");
@@ -96,7 +96,7 @@ $(document).ready(() => {
           dump(y.files[0]);
         }
       });
-    });
+    });*/
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
