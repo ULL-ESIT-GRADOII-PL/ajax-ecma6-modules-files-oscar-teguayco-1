@@ -85,6 +85,10 @@ $(document).ready(() => {
           'json'
         );
     });
+    
+    /* Useful information about how an AJAX Request works:
+        https://api.jquery.com/jquery.get/                      */
+    
    
     /* botones para rellenar el textarea */
     $('button.example').each( (_,y) => {
