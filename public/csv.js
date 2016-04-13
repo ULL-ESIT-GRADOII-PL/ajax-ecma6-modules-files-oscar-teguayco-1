@@ -37,7 +37,7 @@ const handleFileSelect = (evt) => {
   console.log(evt);
   var files = evt.target.files; // FileList object.
 
-  console.log(files);
+  console.log(files[0]);
   var reader = new FileReader();
   reader.onload = (e) => {
 
