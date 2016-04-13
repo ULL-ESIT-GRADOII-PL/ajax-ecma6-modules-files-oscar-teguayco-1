@@ -42,7 +42,6 @@ const handleFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "blue";
   };
-  //reader.readAsText(files[0])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
@@ -57,7 +56,6 @@ const handleDragFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "purple";
   };
-  reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
