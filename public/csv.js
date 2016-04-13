@@ -34,8 +34,10 @@ const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
+  console.log(evt);
   var files = evt.target.files; // FileList object.
 
+  console.log(files);
   var reader = new FileReader();
   reader.onload = (e) => {
 
