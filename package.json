@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
+  "author": "Teguayco y Óscar"
   "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
@@ -29,7 +29,7 @@
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node": "5.0.0"
   },
   "devDependencies": {
   }
