@@ -43,6 +43,7 @@ const handleFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "blue";
   };
+  
   reader.readAsText(files[0])
 }
 
@@ -58,6 +59,8 @@ const handleDragFileSelect = (evt) => {
     $("#original").val(e.target.result);
     evt.target.style.background = "purple";
   };
+  
+  reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
