@@ -35,5 +35,6 @@ const calculate = (original) => {
     return r;
   };
 
-module.exports = calculate;
+  module.exports = calculate;
+  
 })();
