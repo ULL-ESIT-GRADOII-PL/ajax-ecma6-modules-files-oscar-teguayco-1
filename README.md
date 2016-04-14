@@ -2,7 +2,7 @@
 
 TO-DO: acabar README
 
-Link al despliegue: https://sleepy-peak-84160.herokuapp.com/
+Link al despliegue: http://ajax-oscar-teguayco.herokuapp.com/
 
 
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
