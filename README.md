@@ -1,45 +1,34 @@
+# Grado en Ingeniería Informática
 # Práctica 2: Comma separated values (CSV) with AJAX
 
-TO-DO: acabar README
 
-Link al despliegue: http://ajax-oscar-teguayco.herokuapp.com/
-Link repo del fork: https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1
+Durante el desarrollo de esta práctica se ha hecho uso de:
+* AJAX
+* NodeJs
+* Karma
+* Heroku
+* jQuery
+* ECMA6
+* Manejo de eventos
 
-## jQuery.get( url [, data ] [, success ] [, dataType ] )
-* url
-  * Type: String
-  * A string containing the URL to which the request is sent.
-* data
-  * Type: PlainObject or String
-  * A plain object or string that is sent to the server with the request.
-* success
-  * Type: Function( PlainObject data, String textStatus, jqXHR jqXHR )
-  * A callback function that is executed if the request succeeds. 
-    Required if `dataType` is provided, but you can use `null` or `jQuery.noop` as a placeholder.
-* dataType
-  * Type: String
-  * The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
 
-## jQuery.get( [settings ] )
-* settings
-  * Type: PlainObject
-  * A set of key/value pairs that configure the Ajax request. 
-  * All properties except for `url` are optional. 
-  * A default can be set for any option with `$.ajaxSetup()`.
+**Repositorio GitHub (organización)**
 
-This is a shorthand Ajax function, which is equivalent to:
+* [Repositorio AJAX](https://github.com/ULL-ESIT-GRADOII-PL/ajax-ecma6-modules-files-oscar-teguayco-1)
 
-```javascript
-$.ajax({
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
-});
-```
+**Repositorio GitHub (fork)**
 
-The success callback function is passed the returned data, which will be an XML root element, text string, JavaScript file, or JSON object, depending on the MIME type of the response. It is also passed the text status of the response.
+* [Repositorio AJAX](https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1)
+
+**Página de la práctica**
+
+* [Despliegue](http://ull-esit-gradoii-pl.github.io/ajax-ecma6-modules-files-oscar-teguayco-1)
+
+**Páginas de los desarrolladores**
+
+* [Web Teguayco Gutiérrez González](http://alu0100825503.github.io/)
+* [Web Óscar David  Martín Cabrera](http://oscar-dmc.github.io/)
 
 # Heroku 
-https://cvsajax.herokuapp.com/
+http://ajax-oscar-teguayco.herokuapp.com/
 
