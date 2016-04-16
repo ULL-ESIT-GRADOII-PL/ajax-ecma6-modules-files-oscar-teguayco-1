@@ -1,6 +1,7 @@
 # Grado en Ingeniería Informática
 # Práctica 2: Comma separated values (CSV) with AJAX
 
+[![Build Status](https://travis-ci.org/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1.svg?branch=master)](https://travis-ci.org/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1)
 
 Durante el desarrollo de esta práctica se ha hecho uso de:
 * AJAX
