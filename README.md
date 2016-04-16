@@ -29,5 +29,5 @@ Durante el desarrollo de esta práctica se ha hecho uso de:
 * [Web Teguayco Gutiérrez González](http://alu0100825503.github.io/)
 * [Web Óscar David  Martín Cabrera](http://oscar-dmc.github.io/)
 
-# Heroku 
+# Despliegue en Heroku 
 http://ajax-oscar-teguayco.herokuapp.com/
