@@ -4,33 +4,44 @@
   "description": "Analizador de cadenas csv usando AJAX",
   "main": "csv.js",
   "scripts": {
-    "test": "firefox tests/index.html"
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
+  "author": "Teguayco y Óscar",
   "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1"
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1",
   "dependencies": {
-	"jquery": "*",
+    "jquery": "*",
     "underscore": "*",
-	"express": "~3.2.6",
+    "express": "*",
     "ejs": "*",
     "body-parser": "~1.12.0",
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node": "5.0.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-jasmine": "^0.3.8",
+    "karma-mocha": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "mocha": "^2.4.5",
+    "phantomjs-prebuilt": "^2.1.7"
   }
 }
