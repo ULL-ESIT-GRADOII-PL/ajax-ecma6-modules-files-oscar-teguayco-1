@@ -3,7 +3,7 @@
 TO-DO: acabar README
 
 Link al despliegue: http://ajax-oscar-teguayco.herokuapp.com/
-Link repo del fork: https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1
+https://github.com/alu0100825503/ajax-ecma6-modules-files-oscar-teguayco-1
 
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
 * url
