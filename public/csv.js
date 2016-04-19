@@ -94,6 +94,9 @@ $(document).ready(() => {
     $('button.example').each( (_,y) => {
      $(y).click( () => { dump(`${$(y).text()}.txt`); });
     });
+    
+    /* Guardar entrada actual en MongoDB */
+    
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
