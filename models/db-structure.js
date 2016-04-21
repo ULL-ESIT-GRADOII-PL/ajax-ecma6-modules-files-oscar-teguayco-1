@@ -2,38 +2,33 @@
   "use strict";
   const util = require('util');
   const mongoose = require('mongoose');
-
-  mongoose.connect('mongodb://localhost/chuchu');
-  const CardSchema = mongoose.Schema({ 
-    "rank" : String,
-    "suit" : String,
-    "chuchu": [ {a: String, b: String}]
+  
+  /* Construimos el Schema: describe la forma de los 
+   * documento dentro de una colección */
+  const ExampleSchema = mongoose.Schema({ 
+    "exampleName" : String,
+    "exampleContent": String
   });
 
-  const Card = mongoose.model("Card", CardSchema);
+  /* Creamos un modelo a partir del schema */
+  const Example = mongoose.model("Example", ExampleSchema);
 
-  let c1 = new Card({"rank":"ace", "suit":"spades ♠",   "chuchu": [{a: "hello", b: "world!"}]});
-  let c2 = new Card({"rank":"2",   "suit":"hearts ♥",   "chuchu": [{a: "hola", b: "mundo"}]});
-  let c3 = new Card({"rank":"3",   "suit":"clubs ♣",    "chuchu": [{a: "hola", b: "mundo"}]});
-  let c4 = new Card({"rank":"4",   "suit":"diamonds ♦", "chuchu": [{a: "hola", b: "mundo"}]});
-
-
-  let p1 = c1.save(function (err) {
-    if (err) { console.log(`Hubieron errores:\n${err}`); return err; }
-    console.log(`Saved: ${c1}`);
+  /* Creamos los documentos, que se corresponden con los ejemplos de entrada CSV */
+  let e1 = new Example({
+        "exampleName": "ejemplo1.txt",
+        "exampleContent": `"producto",           "precio"  "fecha"
+                           "camisa",             "4,3",    "14/01"
+                           "libro de O\\"Reilly", "7,2"     "13/02"`
   });
 
-  let p2 = c2.save(function (err) {
-    if (err) { console.log(`Hubieron errores:\n${err}`); return err; }
-    console.log(`Saved: ${c2}`);
+  /* Se añade el ejemplo creado a la MongoDB */
+  let p1 = e1.save(function (err) {
+    if (err) { console.log('Hubo errores:\n${err}'); return err; }
+    console.log(`Saved: ${e1}`);
   });
 
-  let p3 = Card.create(c3, function (err, x) {
-    if (err) { console.log(`Hubieron errores:\n${err}`); return err; }
-    console.log(`Saved p3: ${x}`);
-  });
-
-  Promise.all([p1, p2, p3]).then( (value) => { 
+  /* Se espera a que se añada el ejemplo */
+  Promise.all([p1]).then( (value) => { 
     console.log(util.inspect(value, {depth: null}));  
     mongoose.connection.close(); 
   });
