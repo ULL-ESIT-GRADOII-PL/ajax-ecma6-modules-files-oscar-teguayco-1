@@ -15,7 +15,7 @@
 
   /* Creamos los documentos, que se corresponden con los ejemplos de entrada CSV */
   let e1 = new Example({
-        "exampleName": "ejemplo1.txt",
+        "exampleName": "input.txt",
         "exampleContent": `"producto",           "precio"  "fecha"
                            "camisa",             "4,3",    "14/01"
                            "libro de O\\"Reilly", "7,2"     "13/02"`
