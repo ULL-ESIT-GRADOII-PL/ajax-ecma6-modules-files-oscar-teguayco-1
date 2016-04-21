@@ -32,4 +32,6 @@
     console.log(util.inspect(value, {depth: null}));  
     mongoose.connection.close(); 
   });
+  
+   module.exports = Example;
 })();

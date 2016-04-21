@@ -95,8 +95,15 @@ $(document).ready(() => {
      $(y).click( () => { dump(`${$(y).text()}.txt`); });
     });
     
-    /* Guardar entrada actual en MongoDB */
-    
+    /* Guardamos un ejemplo en MongoDB por el nombre especificado
+     * en la caja de texto tras pulsar el botón 'Guardar'
+     */
+    $("#guardar").click( () => {
+      if (window.localStorage) localStorage.original = original.value;
+      $.get("/mongo/" + $("#exampleName").val(), {
+        content: $("#original").val()
+      });
+    });
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
